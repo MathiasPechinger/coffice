@@ -2,7 +2,7 @@
 
 This project was developed to get rid of the paper based analog version of tracking the coffee and other beverages. (Naming: Coffee + Office = COffice)
 
-<img src="docs/FrontEnd.png" alt="drawing" width="400"/>
+<img src="docs/FrontEnd.PNG" alt="drawing" width="400"/>
 
 The names and values in the table are examples ;)
 
