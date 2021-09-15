@@ -1,0 +1,120 @@
+.header {
+  height: 150px;
+  width: auto;
+  align-items: center;
+  text-align: center;
+  background: rgb(223,105,0);
+  background: linear-gradient(180deg, rgba(223,105,0,1) 0%, rgba(222,148,41,1) 35%, rgba(255,255,255,1) 100%);
+}
+.headerLogoContainer {
+  height: 100px;
+  width: auto;
+  /* background-color: dimgray; */
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* #bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+} */
+
+th {
+  text-align: left;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+
+
+.formContainerRight {
+  /* float: left; */
+  /* width: 300px; */
+  /* height: auto; */
+  /* background-color: dodgerblue; */
+}
+
+.formContainerLeft {
+  /* float: left; */
+  /* width: 300px; */
+  /* height: auto; */
+  /* background-color: rgb(35, 190, 82); */
+}
+#leftTable {
+	float: left;
+	width: 40%;
+	/* background-color: #DDD; */
+}
+#rightTable {
+	float: left;
+	width: 50%;
+	/* background-color: #CCC; */
+}
+
+
+.sendButton {
+  height: 60px;
+  width: auto;
+  background: rgb(223,105,0);
+  background: linear-gradient(180deg, rgba(223,105,0,1) 0%, rgba(222,148,41,1) 35%, rgba(255,255,255,1) 100%);
+  font-size: xx-large;
+}
+
+.checkbox {
+  width: 50px;
+  height: 50px;
+}
+.namecontainer p{
+  font-size: 50;
+  size: 20px;
+  color: #000;
+}
+
+.tableContainer {
+  /* background-color: dimgray; */
+  /* float:inline-end; */
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.formContainer {
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: rgb(204, 50, 50); */
+  width: auto;
+  text-align:center;
+  align-content:center;
+}
+
+.InputDataTable {
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: rgb(179, 26, 26); */
+  font-size: 25px;
+}
+
+.UserData {
+  font-size: 20px;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.UserDataTable {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  /* background-color: dimgray; */
+  background: rgb(223,105,0);
+  background: linear-gradient(180deg, rgba(223,105,0,1) 0%, rgba(222,148,41,1) 35%, rgba(255,255,255,1) 100%);
+}
+
+ input[type=radio] {
+  border: 2px;
+  /* width: 100%; */
+  /* height: 1em;  */
+  /* text-align: center; */
+  transform: scale(2);
+}
