@@ -22,7 +22,7 @@
       while ($row = $result->fetch_assoc()) {
         $columnIter = $columnIter + 1;
         echo "<tr><th><input type='radio' name='product' value=" . $row["name"] . ">
-                              <th>" . $row["name"] . "(" . $row["price"] . ")</th></th></tr>";
+                              <th>" . $row["name"] . " (" . $row["price"] . "€)</th></th></tr>";
       }
     } else {
       echo "0 results";
