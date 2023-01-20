@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<script type="text/javascript">
+
+  $(document).ready(function () {
+
+    $.ajax({
+      type: "GET",
+      url: "getUserList.php",
+      dataType: "html",
+      success: function (response) {
+        $("#userDataContainer").html(response);
+      }
+    });
+
+
+    $.ajax({
+      type: "GET",
+      url: "getConsumablesList.php",
+      dataType: "html",
+      success: function (response) {
+        $("#consumablesDataContainer").html(response);
+      }
+    });
+
+
+    $.ajax({
+      type: "GET",
+      url: "getConsumptionTable.php",
+      dataType: "html",
+      success: function (response) {
+        $("#userTableContainer").html(response);
+      }
+    });
+
+  });
+
+  function buyItem() {
+    //get user name
+    var userList = document.getElementsByName("usrName");
+    var userName;
+    for (i = 0; i < userList.length; i++) {
+      if (userList[i].checked) {
+        userName = userList[i].value
+        // console.log(userName)
+        break;
+      }
+    }
+    //get selected product
+    var productList = document.getElementsByName("product");
+    var userProduct;
+    for (i = 0; i < productList.length; i++) {
+      if (productList[i].checked) {
+        userProduct = productList[i].value
+        // console.log(userProduct)
+        break;
+      }
+    }
+    $.ajax({
+      url: 'addToConsumptionHistory.php',
+      // method: 'POST',
+      method: 'GET',
+      data: {
+        userProduct: userProduct,
+        userName: userName
+      },
+      success: function (data) {
+        // alert(data);
+      }
+    });
+
+
+    $.ajax({
+      type: "GET",
+      url: "getConsumptionTable.php",
+      dataType: "html",
+      success: function (response) {
+        $("#userTableContainer").html(response);
+      }
+    });
+
+  };
+
+</script>
+
+
+
+<body>
+
+  <div class="header">
+    <div class="headerLogoContainer" id="bottom">
+      <p> hello world </p>
+    </div>
+  </div>
+
+  <div class="maincontainer">
+    <div class="formContainer">
+      <div class="formContainerLeft" id="leftTable">
+        <table class="InputDataTable" id="userDataContainer">
+          <!-- get users from mysql via ajax-->
+        </table>
+      </div>
+
+      <div class="formContainerRight" id="rightTable">
+        <table class="InputDataTable" id="consumablesDataContainer">
+
+          <!-- get consumables from mysql -->
+
+        </table>
+      </div>
+      <div class="buttoncontainer">
+        <table class="InputDataTable">
+          <tr>
+            <th><button class="sendButton" id="btn" onclick="buyItem()">Drink</button></th>
+            <p id="output"></p>
+          </tr>
+        </table>
+      </div>
+
+
+    </div>
+    <div class="tableContainer" id="userTableContainer"></div>
+  </div>
+
+
+</body>
