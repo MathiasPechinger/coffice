@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 20, 2023 at 05:00 PM
+-- Generation Time: Jan 23, 2023 at 04:10 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,7 +41,8 @@ INSERT INTO `Consumables` (`id`, `name`, `price`) VALUES
 (1, 'Bier', 1),
 (2, 'Wasser', 0.6),
 (3, 'Kaffee', 0.25),
-(4, 'LL-Suppe', 3.5);
+(4, 'LL-Suppe', 3.5),
+(5, 'Liebe', 1000);
 
 -- --------------------------------------------------------
 
@@ -64,20 +65,9 @@ CREATE TABLE `ConsumptionHistory` (
 --
 
 INSERT INTO `ConsumptionHistory` (`id`, `product_name`, `price`, `date_time`, `consumer_id`, `product_id`, `consumer_name`) VALUES
-(25, 'coffee', 0.25, '2020-01-01 12:01:01', 1, 3, 'peche'),
-(26, 'beer', 1, '2020-01-01 12:01:01', 4, 1, 'julian'),
-(27, 'beer', 1, '2020-01-01 12:01:01', 6, 1, 'Bene'),
-(28, 'beer', 1, '2020-01-01 12:01:01', 6, 1, 'Bene'),
-(29, 'water', 0.6, '2020-01-01 12:01:01', 6, 2, 'Bene'),
-(30, 'water', 0.6, '2020-01-01 12:01:01', 6, 2, 'Bene'),
-(328, 'blank', -1, '2020-01-01 12:01:01', -1, -1, ''),
-(329, 'blank', -1, '2020-01-01 12:01:01', -1, -1, ''),
-(330, 'blank', -1, '2020-01-01 12:01:01', -1, -1, ''),
-(331, 'beer', 1, '2020-01-01 12:01:01', 4, 1, 'julian'),
-(332, 'water', 0.6, '2020-01-01 12:01:01', 5, 2, 'CN'),
-(333, 'water', 0.6, '2020-01-01 12:01:01', 5, 2, 'CN'),
-(334, 'water', 0.6, '2020-01-01 12:01:01', 5, 2, 'CN'),
-
+(490, 'Wasser', 0.6, '2020-01-01 12:01:01', 4, 2, 'julian'),
+(491, 'Wasser', 0.6, '2020-01-01 12:01:01', 4, 2, 'julian'),
+(492, 'Wasser', 0.6, '2020-01-01 12:01:01', 4, 2, 'julian');
 
 -- --------------------------------------------------------
 
@@ -130,13 +120,13 @@ ALTER TABLE `Users`
 -- AUTO_INCREMENT for table `Consumables`
 --
 ALTER TABLE `Consumables`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ConsumptionHistory`
 --
 ALTER TABLE `ConsumptionHistory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=456;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=503;
 
 --
 -- AUTO_INCREMENT for table `Users`
