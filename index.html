@@ -48,6 +48,10 @@
   });
 
   function buyItem() {
+
+
+
+
     //get user name
     var userList = document.getElementsByName("usrName");
     var userName;
@@ -68,6 +72,9 @@
         break;
       }
     }
+
+    $('input:radio').removeAttr('checked');
+
     $.ajax({
       url: 'addToConsumptionHistory.php',
       // method: 'POST',
