@@ -7,18 +7,40 @@ This project was developed to get rid of the paper based analog version of track
 The names and values in the table are examples ;)
 
 ## Usage
-Click the name and the Bevarge. Finally click on Drink and you are good to go.
+Click the name and the Item. Finally click on Buy and you are good to go.
 
 ## Installation
 
-- The php script is running using XAMPP. Install the XAMPP Server and place the repo inside the following folder:
-C:\xampp\htdocs\coffice
+- Install xampp on you system which should work on Ubuntu and Windows.
 
-- Rename "user_data template.csv" to "user_data.csv"
+- The repository is running using XAMPP. Install the XAMPP Server and place the repo inside the following folder:
+C:\xampp\htdocs\
 
-- After XAMPP is started you can browse "localhost:8080/coffice" on your local machine. 
+Your structure you look like this:
+
+/opt/lampp/htdocs/coffice
+├── addToConsumptionHistory.php
+├── db_connection.php
+├── docs
+│   └── FrontEnd.PNG
+├── getConsumablesList.php
+├── getConsumptionTable.php
+├── getUserList.php
+├── images
+│   └── hsa_logo.png
+├── index.html
+├── readme.md
+└── style.css
+
+- Setup a mysql database using the template given in the folder databaseTemplate. Make sure to setup the credentials for the database according to "db_connection.php"
+
+- After XAMPP is started you can browse "http://localhost/coffice" on your local machine. 
+
+- Users and consumables can be added deleted or modified using phpMyAdmin: http://localhost/phpmyadmin/index.php
+
+
+
 
 ## Trouble shooting 
-Make sure to setup the right port in XAMPP. In our example this is 8080.
-Check the local path to the csv file and make sure to rename it to "user_data.csv".
+No trouble at all ;)
 

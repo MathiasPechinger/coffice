@@ -118,3 +118,27 @@ th {
   /* text-align: center; */
   transform: scale(2);
 }
+
+.custom-title {
+  background: -webkit-linear-gradient(top, #5cb85c 0%,#3b8d3b 100%);
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.custom-content {
+  background-color: white;
+  border: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  display: none;
+}
