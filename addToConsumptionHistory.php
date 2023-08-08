@@ -11,7 +11,7 @@
     if (!$con) {
         echo "Something went wrong opening the MySQL Database";
     } else {
-        echo "success";
+        // echo "success";
     }
 
     $userName = $_GET['userName']; // name of the user that buys something
@@ -21,7 +21,7 @@
     $consumer_id = -1;
     $product_name = "blank";
     $price = -1;
-    $date_time = "2020-01-01 12:01:01";
+    $date_time = date('Y-m-d H:i:s');
     $product_id = -1;
     $consumer_name = $userName; // duplicate, but nvm.
 
@@ -57,7 +57,7 @@
     $sql = "INSERT INTO ConsumptionHistory (consumer_id,product_name,price,date_time,product_id,consumer_name) 
         VALUES (" . $consumer_id . ",'" . $product_name . "'," . $price . ",'" . $date_time . "'," . $product_id . ",'" . $consumer_name . "');";
     $result = $con->query($sql);
-
+    echo $result;
 
 
     CloseCon($con);
